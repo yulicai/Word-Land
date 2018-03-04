@@ -1,0 +1,55 @@
+yuli cai was born in shenzhen
+she now lives in brooklyn, new york
+somebody says she is an artist
+some says she is an entrepreneur 
+she likes water
+floating on water is one of the most pleasant thing she could think of
+she studied industrial design when she was in college
+her college is in hangzhou
+hangzhou rains in the winter
+new york sometimes rains in the winter too, like yesterday
+she is 25 years old now
+she did a balloon thing for her thesis at ITP
+she thought she would continue doing physical installation thingy after graduation 
+she sometimes makes art with code, or joke
+she likes all kinds of food except carrots
+she takes L train to the city
+sometimes M train
+the big blue is one of her favorite movie
+she likes marvel too
+she can not ski
+she has some secret
+everybody does
+she likes doing sports
+all kinds of balls
+she graduated from Shenzhen experimental school
+zhejiang university
+new york university
+oh she went to RISD for a summer too
+she did printmaking there
+she once thought she would study architecture
+she likes dancing
+sometimes drinking
+not very much likes talking to people
+she wants to learn surfing
+she has done a big range of work
+digital performance with dancers
+physical computing
+creative coding, three.js, processing, cinder, openframework
+a little bit of machine learning
+she recently starts to experiment with AR
+Yuli is an artist, technologist and also a researcher, with a simple goal, making surprising yet natural living urban spaces.
+Her work focuses on merging different emotional states and cultural contexts into natural forms of expression. An intertwined but remote conversation with eastern culture rooted is a main part of her research and practice.
+Her work has taken the form of kinetic sculptures, interactive installations and sometimes digital performances, where peace and purity are always the underlying message.
+She is now taking her step on analysing and producing data that will give a more empathetic brain for her physical and architectural interface for the same goal, in which concrete wall and living leaves are no longer that different.
+She is currently a research resident at Interactive Telecommunications Program(ITP), Tisch School of the Arts, NYU.
+It takes the ancient Chinese poem as an input, along with memories from other immigrant artists, analyzes it with machine learning algorithm and outputs to different emotions. These emotions are being translated into programming language for the machines. The mechanism system of the machine transforms it into balloon language in the end.
+waterFalse is an interactive installation based digital performance. It re-imagines and combines the ancient Chinese chime and Fou (缶, a percussion instrument) with digital audio visual installation.
+It is composed of four almost identical spinners called Fou by Yuli, each Fou has different sound textures and various interaction gestures. Within them, is different amount of water, that gives waterFalse the ability to generate original and natural water sound as one of the main audio sources of this new interface of instrument, surrounded and contained by other computer generated synthesized sounds while playing.
+Using different pulling gestures during her performance, Yuli Cai gradually reveals different stories behind different Fous as different sound textures. It captures five sound elements together, which are Natural water sound, Panning wind sound, Monk singing, Simulation of matouqin sound (a two string Mongolian instrument) and Female opera singing. Other than that, it also digs deeper into the relationship between water and this project, by using another existence form of water, mist. While playing one of the Fous, it will activate the unique mist blowing out of it. The mist becomes visible by spilling the rear projection on it. Combining with reactive led surrounded on each Fou, it creates a sensory,mysterious as well as peaceful feeling among its audience.
+The name waterFalse is coming from an ancient Chinese instrument called Fou, which has the same pronunciation of  the meaning false in Chinese.
+she worked at Bluecadet
+she worked at Second Story Studio
+She worked at Alibaba
+She was an UX Designer
+she is a creative technologist
