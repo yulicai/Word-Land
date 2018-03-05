@@ -3,9 +3,10 @@
 word2vec, three.js, basic python
 
 <br>
+
 ## Structure
 
-1. Basic Python 
+1. **Basic Python**
 
 2. word2vec
 - 2.1 What is word2vec
