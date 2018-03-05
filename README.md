@@ -1,24 +1,25 @@
 # Word-Land
 
-## word2vec, three.js, basic python
+word2vec, three.js, basic python
+
 ***
 
 <br>
 
-## Basic Python 
+## 1. Basic Python 
 
-## word2vec
+## 2. word2vec
 
-### What is word2vec
+### 2.1 What is word2vec
 
-### Setups for word2vec
+### 2.2 Setups for word2vec
 
 
 
-## Three.js
+## 3. Three.js
 
-### What is three.js
+### 3.1 What is three.js
 
-### A basic basic example 
+### 3.2 A basic basic example 
 
-### How to use Three.js to visualize our word2vec result
+### 3.3 How to use Three.js to visualize our word2vec result
