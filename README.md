@@ -4,6 +4,7 @@ word2vec, three.js, basic python
 
 <br>
 ## Structure
+
 1. Basic Python 
 
 2. word2vec
