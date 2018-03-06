@@ -1,20 +1,26 @@
 # Word-Land
 
-#### How can human language be shaped into a virtual sculpture, a word land, through the help of machine language.
+### How can human language be shaped into a virtual sculpture, a word land, through the help of machine language.
 
-It is a project by [Yuli Cai](https://www.caiyuli.com/), from her formal work [Word Land Route](https://github.com/yulicai/NOC_Intelligence-Learning/tree/master/word_land_route). This time the approach of the land takes place from 2 dimensions to 3 demensions.
+Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her formal work [Word Land Route](https://github.com/yulicai/NOC_Intelligence-Learning/tree/master/word_land_route). This time the approach of the land takes place from 2 dimensions to 3 demensions. It takes a corpus of text, which are movies scripts in the following examples, process them through machine learning(word2vec), and visualize them as a 3D sculpture living in the screen using three.js. 
 
 <br /> 
 
-Two parts are covered in this project.
+**Two parts are covered in this project.**
 1. Natural Language Processing(word2vec), 
 2. Visualization of the words (three.js) 
 
 ![Word Land, Visual](https://github.com/yulicai/Word-Land/raw/master/images/wordland2.gif)
 
+Word Land created from the script of movie Captain America
+
 ![Word Land,Script from movie Captain America](https://github.com/yulicai/Word-Land/raw/master/images/wordland_gif.gif)
 
+Word Land created from the script of movie The Post
+
 ![Word Land,Script from movie The Post](https://github.com/yulicai/Word-Land/raw/master/images/wordland_tp.gif)
+
+Word Land created from the script of movie Iron Man
 
 ![Word Land,Script from movie Iron Man](https://github.com/yulicai/Word-Land/raw/master/images/wordland_im.gif)
 
