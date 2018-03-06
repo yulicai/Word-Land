@@ -4,6 +4,12 @@ word2vec, three.js, basic python
 
 ![Word Land,Script from movie Captain America](https://github.com/yulicai/Word-Land/raw/master/images/wordland_gif.gif)
 
+![Word Land,Script from movie The Post](https://github.com/yulicai/Word-Land/raw/master/images/wordland_tp.gif)
+
+![Word Land,Script from movie Iron Man](https://github.com/yulicai/Word-Land/raw/master/images/wordland_im.gif)
+
+![Word Land, Visual](https://github.com/yulicai/Word-Land/raw/master/images/wordland2.gif)
+
 <br>
 
 ## Structure
