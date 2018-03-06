@@ -12,6 +12,8 @@ Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her
 
 ![Word Land, Visual](https://github.com/yulicai/Word-Land/raw/master/images/wordland2.gif)
 
+***
+
 Word Land created from the script of movie Captain America
 
 ![Word Land,Script from movie Captain America](https://github.com/yulicai/Word-Land/raw/master/images/wordland_gif.gif)
