@@ -2,6 +2,8 @@
 
 word2vec, three.js, basic python
 
+![Word Land,Script from movie Captain America](https://github.com/yulicai/Word-Land/raw/master/images/wordland_gif.gif)
+
 <br>
 
 ## Structure
@@ -41,7 +43,7 @@ word2vec, three.js, basic python
 
 - Gensim
 	- using conda for Python3 
-	
+
 - TSNE
 
 
@@ -52,3 +54,10 @@ word2vec, three.js, basic python
 ### 3.2 A basic basic example 
 
 ### 3.3 How to use Three.js to visualize our word2vec json result
+
+
+
+
+
+
+
