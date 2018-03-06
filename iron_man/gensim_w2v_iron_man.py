@@ -31,6 +31,7 @@ def sentence_to_wordlist(raw):
     # remove common words and tokenize
     stoplist = set('m t'.split())
 
+    # Create a list of words
     texts = [word for word in real_words if word not in stoplist]
     return texts
 
@@ -38,6 +39,7 @@ def sentence_to_wordlist(raw):
 sentences = []
 for raw in raw_sentences:
     if(len(raw)>0):
+        # A list within list
         sentences.append(sentence_to_wordlist(raw))
 
 # initialize model with gensim object
@@ -63,6 +65,7 @@ word_vectors = dict()
 for sentence in sentences:
     for word in sentence:
         try:
+            # The word vectors are stored in a KeyedVectors instance in model.wv.
             # .tolist() -- Converting NumPy array into Python List structure
             word_vectors[word]=list(model.wv[word].tolist())
         except KeyError:
@@ -73,6 +76,7 @@ with open('captain_america_gensim_result.json', 'w') as fp:
     json.dump(word_vectors, fp,sort_keys=True, indent=4)
 
 
+# You can perform various NLP word tasks with the model. Some of them are already built-in:
 # print (word_vectors)
 # toprint =model.wv.similarity('bleak', 'spring')
 # print (toprint)
