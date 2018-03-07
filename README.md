@@ -60,6 +60,8 @@ Word Land created from the script of movie Iron Man
 <br>
 
 ## 1. Basic Python 
+Beautiful [intro to python documentation](https://github.com/antiboredom/detourning-the-web/blob/master/week_01/python_basics.md) by Sam Lavigne
+
 - list()
 - wordcount
 

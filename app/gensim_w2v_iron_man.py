@@ -1,12 +1,14 @@
 # using python3
+ # coding: utf-8
 # source activate iron_man
 import codecs
 import sys
 import re
-import multiprocessing
+# import multiprocessing
 import json
 
 import nltk
+nltk.download('punkt')
 import gensim.models.word2vec as w2v
 import numpy as np
 
@@ -51,7 +53,7 @@ for raw in raw_sentences:
 model = w2v.Word2Vec(
     sg=1,
     seed=1,
-    workers= multiprocessing.cpu_count(),
+    workers= 4,
     size=200,
     min_count=1,
     window=7,
