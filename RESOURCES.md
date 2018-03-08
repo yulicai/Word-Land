@@ -12,6 +12,8 @@
 
 ## Tutorials
 
+[The original research page on Google](https://code.google.com/archive/p/word2vec/)
+
 [Another god introduction to word2vec](https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/)
 
 [Gensim with word2vec](https://rare-technologies.com/word2vec-tutorial/) Scroll down to the end for the live demo!
@@ -20,6 +22,8 @@
 
 [How skip-gram of word2vec works](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 
-[How t-sne works](http://scienceai.github.io/tsne-js/) Great visualization, live demo of showing how do the parameters of t-sne work
+[How t-SNE works](http://scienceai.github.io/tsne-js/) Great visualization, live demo of showing how do the parameters of t-sne work
+
+[How to use t-SNE effectively](https://distill.pub/2016/misread-tsne/)
 
 ## Related Projects
