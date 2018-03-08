@@ -92,6 +92,8 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 **CBOW and Skip Gram**
 
+<br />
+
 ***
 
 ### 2.2 Setups for word2vec
@@ -148,6 +150,8 @@ pip install gensim && pip freeze >requirements.txt
 pip install -U scikit-learn
 ```
 
+<br />
+
 ***
 
 ### 2.3 Start with Gensim!
@@ -196,6 +200,8 @@ model.save('/tmp/mymodel')
 new_model = gensim.models.Word2Vec.load('/tmp/mymodel')
 ```
 
+<br />
+
 ***
 
 ### 2.4 Dimensionality Reduction with t-SNE
@@ -240,6 +246,9 @@ Dimension of the embedded space
 The learning rate for t-SNE is usually in the range [10.0, 1000.0]. If the learning rate is too high, the data may look like a ‘ball’ with any point approximately equidistant from its nearest neighbours. If the learning rate is too low, most points may look compressed in a dense cloud with few outliers.  
 
 
+<br />
+
+***
 
 
 
