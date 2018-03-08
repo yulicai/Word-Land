@@ -90,22 +90,54 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 - Using **t-SNE**("tee-s-nee") a popular method to do dimensionality reduction for high-dimensional data to reduce the dimensions of our word vectors into 2 or 3 dimensions for us to visualize it. In this case we are using [t-SNE from scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) to do this reduction
 
+<br />
+
 #### 2.2.1 Python environment setup
 We are using python2 in this case  
 
-##### Check your python version
-
+##### a. Check your python version
+Open terminal on MacOS, and type in the following and hit enter
 ```
 python -V
 ```
 
-##### Install pip
+##### b. Install pip
 pip is a tool to install python library. You can either follow the [install guide here](https://pip.pypa.io/en/stable/installing/)  
 Or if you are on MacOS, open terminal, using commend line  
 ```
 sudo easy_install pip
 ```
 You will be asked for your mac password, type it and hit enter.
+
+##### c. Install virtualenv
+virtualenv creates isolated python environments tied to specific projects.
+```
+sudo pip install virtualenv
+```
+
+<br />
+
+#### 2.2.2 Setup our word2vec project!
+
+##### a. Setup directory(folder) and virtual environment 
+
+Create a new project folder "your_project_name", and [cd(change directory)](https://askubuntu.com/questions/520778/how-can-i-change-directories-in-the-terminal) to this folder on terminal.  
+In terminal, type in the following to create a virtual environment for this project and activate it
+```
+virtualenv env
+source env/bin/activate
+```
+You should see (env) at the front of the current line in terminal.
+
+
+##### b. Install dependencies
+
+- gensim, nltk, scikit-learn
+```
+pip install nltk && pip freeze >requirements.txt
+pip install gensim && pip freeze >requirements.txt
+pip install -U scikit-learn
+```
 
 
 ## 3. Three.js
