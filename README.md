@@ -211,6 +211,39 @@ from sklearn.manifold import TSNE
 
 ```
 
+Essential part
+```python
+sizedown_vector = list()
+# TSNE part
+# Create a numpy array from vector list()
+X = np.asarray(vector_list).astype('float64')
+# Convert it to a 3 dimensional vector space
+# Parameters matters
+tsne_model = TSNE(n_components=3, early_exaggeration=14.0, learning_rate=300.0, random_state=0)
+np.set_printoptions(suppress=True)
+#.fit_transform: fit X into an embeded space and return that transformed output
+#.tolist(): use tolist() to convert numpy array into python list data structure 
+sizedown_vector = tsne_model.fit_transform(X).tolist()
+```
+
+#### Some notes from the papers and tutorials online for the above parameters.
+- p_components - default: 2  
+Dimension of the embedded space
+
+- perplexity - default: 30  
+ Larger datasets usually require a larger perlexity. Resonable value: 5-50, but t-sne is **insensitive** to this parameter  
+
+- early_exaggeration - default: 12.0
+ Controls how tight natural clusters in the original space are in the embedded space and how much space will be between them. For larger values, the space between natural clusters will be larger in the embedded space.  
+
+- learning_rate - default:200.0  
+The learning rate for t-SNE is usually in the range [10.0, 1000.0]. If the learning rate is too high, the data may look like a ‘ball’ with any point approximately equidistant from its nearest neighbours. If the learning rate is too low, most points may look compressed in a dense cloud with few outliers.  
+
+
+
+
+
+
 
 ## 3. Three.js
 
