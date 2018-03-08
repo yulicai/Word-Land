@@ -14,6 +14,8 @@
 
 [The original research page on Google](https://code.google.com/archive/p/word2vec/)
 
+[Allison Parrish word2vec tutorial](https://gist.github.com/aparrish/2f562e3737544cf29aaf1af30362f469)
+
 [Another good introduction to word2vec](https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/)
 
 [Gensim with word2vec](https://rare-technologies.com/word2vec-tutorial/) Scroll down to the end for the live demo!

@@ -92,24 +92,26 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 **CBOW and Skip Gram**
 
+<br />
+
 ### 2.2 Setups for word2vec
 
 - Using [Gensim a python library](https://radimrehurek.com/gensim/index.html), for semantics analysation on python to transform our text into word vectors.
 
 - Using **t-SNE**("tee-s-nee") a popular method to do dimensionality reduction for high-dimensional data to reduce the dimensions of our word vectors into 2 or 3 dimensions for us to visualize it. In this case we are using [t-SNE from scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) to do this reduction
 
-<br />
 
-#### 2.2.1 Python environment setup
+
+### 2.2.1 Python environment setup
 We are using python2 in this case  
 
-##### a. Check your python version
+#### a. Check your python version
 Open terminal on MacOS, and type in the following and hit enter
 ```
 python -V
 ```
 
-##### b. Install pip
+#### b. Install pip
 pip is a tool to install python library. You can either follow the [install guide here](https://pip.pypa.io/en/stable/installing/)  
 Or if you are on MacOS, open terminal, using commend line  
 ```
@@ -117,16 +119,16 @@ sudo easy_install pip
 ```
 You will be asked for your mac password, type it and hit enter.
 
-##### c. Install virtualenv
+#### c. Install virtualenv
 virtualenv creates isolated python environments tied to specific projects.
 ```
 sudo pip install virtualenv
 ```
 
 
-#### 2.2.2 Setup our word2vec project!
+### 2.2.2 Setup our word2vec project!
 
-##### a. Setup directory(folder) and virtual environment 
+#### a. Setup directory(folder) and virtual environment 
 
 Create a new project folder "your_project_name", and [cd(change directory)](https://askubuntu.com/questions/520778/how-can-i-change-directories-in-the-terminal) to this folder on terminal.  
 In terminal, type in the following to create a virtual environment for this project and activate it
@@ -137,7 +139,7 @@ source env/bin/activate
 You should see (env) at the front of the current line in terminal.
 
 
-##### b. Install dependencies
+#### b. Install dependencies
 
 - gensim, nltk, scikit-learn
 ```
@@ -178,7 +180,7 @@ model.build_vocab(sentences)
 model.train(sentences, total_examples=model.corpus_count,epochs=model.iter)
 ```
 
-##### Some notes from the papers and tutorials online for the above parameters.
+#### Some notes from the papers and tutorials online for the above parameters.
 - Dimensions(size), default value is 100  
 Bigger size values require more training data, but can lead to better (more accurate) models. Reasonable values are in the tens to hundreds.   
 
@@ -188,11 +190,15 @@ The recommended context window size is 10 for skip-gram and 5 for CBOW
 - min_count, default value is 5  
 Words that appear only once or twice in a billion-word corpus are probably uninteresting typos and garbage. In addition, there’s not enough data to make any meaningful training on those words, so it’s best to ignore them. A reasonable value for min_count is between 0-100, depending on the size of your dataset.  
 
-##### You can also store and load models in gensim
+#### You can also store and load models in gensim
 ```python
 model.save('/tmp/mymodel')
 new_model = gensim.models.Word2Vec.load('/tmp/mymodel')
 ```
+
+<br />
+
+### 2.4 Dimensionality Reduction with t-SNE
 
 
 ## 3. Three.js
