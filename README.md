@@ -99,7 +99,7 @@ We are using python2 in this case
 python -V
 ```
 
-#####Install pip
+##### Install pip
 pip is a tool to install python library. You can either follow the [install guide here](https://pip.pypa.io/en/stable/installing/)  
 Or if you are on MacOS, open terminal, using commend line  
 ```
