@@ -2,7 +2,11 @@
 
 ### How can human language be shaped into a virtual sculpture, a word land, through the help of machine language.
 
-Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her formal work [Word Land Route](https://github.com/yulicai/NOC_Intelligence-Learning/tree/master/word_land_route). This time the approach of the land takes place from 2 dimensions to 3 demensions. It takes a corpus of text, which are movies scripts in the following examples, process them through machine learning(word2vec), and visualize them as a 3D sculpture living in the screen using three.js. 
+Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her formal work [Word Land Route](https://github.com/yulicai/NOC_Intelligence-Learning/tree/master/word_land_route). This time the approach of the land takes place from 2 dimensions to 3 demensions. It takes a corpus of text, which are movies scripts in the following examples, process them through machine learning(word2vec), and visualize them as a 3D sculpture living in the screen using three.js.  
+
+#### Resources
+
+I've gained lots of help from [Dan Shiffman](http://shiffman.net/a2z/) and [Allison Parrish](https://www.decontextualize.com/) and the greate internet. Putting up this resources page to collect all of the related documents. From the original paper, to text data, to visualization tool for t-sne etc.  
 
 <br /> 
 
@@ -33,7 +37,7 @@ Word Land created from the script of movie Iron Man
 4. Basic introduction to THREE.js, an 3D web visual JavaScript library.
 5. From text to 3D visualization.
 
-Here is an illustration of the workflow.
+#### Here is an illustration of the workflow.
 
 ![workflow](https://github.com/yulicai/Word-Land/raw/master/images/workflow.png)
 
@@ -142,7 +146,7 @@ pip install gensim && pip freeze >requirements.txt
 pip install -U scikit-learn
 ```
 
-#### Start with Gensim!
+#### 2.3 Start with Gensim!
 
 The essentials
 
@@ -150,6 +154,28 @@ The essentials
 from gensim.models import Word2Vec
 model= Word2Vec()
 ```
+
+In our code (app/gensim_w2v.py), there are more optinal parameters to control
+```python
+# initialize model with gensim object
+# https://codesachin.wordpress.com/2015/10/09/generating-a-word2vec-model-from-a-block-of-text-using-gensim-python/
+# size - number of dimensions
+# sg – This defines the algorithm. If equal to 1, the skip-gram technique is used. Else, the CBoW method is employed
+# min_count – Terms that occur less than min_count number of times are ignored in the calculations. This reduces noise in the semantic space
+# window - how far away can a assiociated word be at
+model = w2v.Word2Vec(
+    sg=1,
+    seed=1,
+    workers= 4,
+    size=80,
+    min_count=3,
+    window=10,
+    sample=1e-3
+)
+model.build_vocab(sentences)
+model.train(sentences, total_examples=model.corpus_count,epochs=model.iter)
+```
+
 
 ## 3. Three.js
 
