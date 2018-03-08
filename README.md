@@ -6,7 +6,7 @@ Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her
 
 #### Resources
 
-I've gained lots of help from [Dan Shiffman](http://shiffman.net/a2z/) and [Allison Parrish](https://www.decontextualize.com/) and the greate internet. Putting up this resources page to collect all of the related documents. From the original paper, to text data, to visualization tool for t-sne etc.  
+I've gained lots of help from [Dan Shiffman](http://shiffman.net/a2z/) and [Allison Parrish](https://www.decontextualize.com/) and also the greate internet. Putting up this [resources page](https://github.com/yulicai/Word-Land/blob/master/RESOURCES.md) to collect all of the related documents. From the original paper, to text data, to visualization tool for t-sne etc.  
 
 <br /> 
 
