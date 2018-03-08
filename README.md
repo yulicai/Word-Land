@@ -33,6 +33,10 @@ Word Land created from the script of movie Iron Man
 4. Basic introduction to THREE.js, an 3D web visual JavaScript library.
 5. From text to 3D visualization.
 
+Here is an illustration of the workflow.
+
+![workflow](https://github.com/yulicai/Word-Land/raw/master/images/workflow.png)
+
 
 <br>
 
@@ -138,6 +142,14 @@ pip install gensim && pip freeze >requirements.txt
 pip install -U scikit-learn
 ```
 
+#### Start with Gensim!
+
+The essentials
+
+```python
+from gensim.models import Word2Vec
+model= Word2Vec()
+```
 
 ## 3. Three.js
 
