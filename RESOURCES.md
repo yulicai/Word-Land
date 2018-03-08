@@ -22,8 +22,13 @@
 
 [How skip-gram of word2vec works](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 
-[How t-SNE works](http://scienceai.github.io/tsne-js/) Great visualization, live demo of showing how do the parameters of t-sne work
+[How t-SNE works](http://scienceai.github.io/tsne-js/) Great visualization, live demo of showing how does the parameters of t-sne work
 
 [How to use t-SNE effectively](https://distill.pub/2016/misread-tsne/)
 
+[Great great blog about Machine Learnign with art by Kyle McDonald](https://medium.com/@kcimc/a-return-to-machine-learning-2de3728558eb) Part of it is related to word2vec.
+
+
 ## Related Projects
+
+[EmbeddingScripts](https://github.com/kylemcdonald/EmbeddingScripts) by Kyle McDonald
