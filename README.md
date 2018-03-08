@@ -69,7 +69,7 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 - Dictionary dict()
 	
 	d = {'cat': 'cute', 'dog': 'furry'}  
-	key, value pair
+	Key, value pair
 
 - Set()
 	
@@ -89,6 +89,19 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 - Using **t-SNE**("tee-s-nee") a popular method to do dimensionality reduction for high-dimensional data to reduce the dimensions of our word vectors into 2 or 3 dimensions for us to visualize it. In this case we are using [t-SNE from scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) to do the reduction
 
+**Python environment setup** We are using python2 in this case  
+Check your python version
+
+```
+python -V
+```
+
+Install pip, pip is a tool to install python library. You can either follow the [install guide here](https://pip.pypa.io/en/stable/installing/)  
+Or if you are on MacOS, open terminal, using commend line  
+```
+sudo easy_install pip
+```
+You will be asked for your mac password, type it and hit enter.
 
 
 ## 3. Three.js
