@@ -92,7 +92,7 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 **CBOW and Skip Gram**
 
-<br />
+***
 
 ### 2.2 Setups for word2vec
 
@@ -148,7 +148,7 @@ pip install gensim && pip freeze >requirements.txt
 pip install -U scikit-learn
 ```
 
-<br />
+***
 
 ### 2.3 Start with Gensim!
 
@@ -196,9 +196,20 @@ model.save('/tmp/mymodel')
 new_model = gensim.models.Word2Vec.load('/tmp/mymodel')
 ```
 
-<br />
+***
 
 ### 2.4 Dimensionality Reduction with t-SNE
+
+[A great site showing how t-SNE work visually](http://scienceai.github.io/tsne-js/)
+
+A popular method for exploring high-dimensional data is something called t-SNE, introduced by van der Maaten and Hinton in 2008. It has an almost magical ability to create compelling two-dimensonal “maps” from data with hundreds or even thousands of dimensions. 
+
+**Start a new file called tsne_reduction.py**
+```python
+import numpy as np
+from sklearn.manifold import TSNE
+
+```
 
 
 ## 3. Three.js
