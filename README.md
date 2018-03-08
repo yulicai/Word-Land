@@ -63,7 +63,19 @@ Word Land created from the script of movie Iron Man
 Beautiful [intro to python documentation](https://github.com/antiboredom/detourning-the-web/blob/master/week_01/python_basics.md) by Sam Lavigne
 
 - list()
-- wordcount
+
+	num = [0, 1, 2, 3, 4]
+
+- Dictionary dict()
+	
+	d = {'cat': 'cute', 'dog': 'furry'}
+	key, value pair
+
+- Set()
+	
+	animals = {'cat', 'dog'}
+	If an element is in the set, print(‘cat’ in animals) >> true
+
 
 ## 2. word2vec
 
@@ -73,10 +85,10 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 ### 2.2 Setups for word2vec
 
-- Gensim
-	- using conda for Python3 
+- Using [Gensim a python library](https://radimrehurek.com/gensim/index.html), for semantics analysation on python to transform our text into word vectors.
 
-- TSNE
+- Using **t-SNE**("tee-s-nee") a popular method to do dimensionality reduction for high-dimensional data to reduce the dimensions of our word vectors into 2 or 3 dimensions for us to visualize it. In this case we are using [t-SNE from scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) to do the reduction
+
 
 
 ## 3. Three.js

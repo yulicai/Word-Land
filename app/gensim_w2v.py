@@ -1,6 +1,11 @@
-# using python3
- # coding: utf-8
-# source activate iron_man
+# coding: utf-8
+
+# A script to do work2vec, taking the raw text data
+# Using Gensim
+# Yuli Cai
+# 2018 March
+
+
 import codecs
 import sys
 import re
@@ -8,13 +13,14 @@ import re
 import json
 
 import nltk
-nltk.download('punkt')
+# uncomment the following line if this is the first time running this script
+# nltk.download('punkt')
 import gensim.models.word2vec as w2v
 import numpy as np
 
 
 source_text = u""
-with codecs.open("captain_america_script.txt","r","utf-8") as raw:
+with codecs.open("../scripts/three_billboards_outside_ebbing_script.txt","r","utf-8") as raw:
     source_text += raw.read()
 
 # using nltk(natural language toolkit)
@@ -26,12 +32,13 @@ raw_sentences = tokenizer.tokenize(source_text)
 def sentence_to_wordlist(raw):
     # remove non letters and split into words
     # ^[a-zA-Z] means any a-z or A-Z at the start of a line
-    #[^a-zA-Z] means any character that IS NOT a-z OR A-Z
+    #[^a-zA-Z] means any character that IS NOT a-z OR A-Z, it will be replaced by " " in this case
+    # re: regular expression library
     make_sense = re.sub("[^a-zA-Z]"," ", raw)
     real_words = make_sense.lower().split()
 
     # remove common words and tokenize
-    stoplist = set('m t'.split())
+    stoplist = set('m t an can be that was is it and the with for this of are th from at so to not'.split())
 
     # Create a list of words
     texts = [word for word in real_words if word not in stoplist]
@@ -54,9 +61,9 @@ model = w2v.Word2Vec(
     sg=1,
     seed=1,
     workers= 4,
-    size=200,
-    min_count=1,
-    window=7,
+    size=80,
+    min_count=3,
+    window=10,
     sample=1e-3
 )
 model.build_vocab(sentences)
@@ -74,7 +81,7 @@ for sentence in sentences:
             break
 
 
-with open('captain_america_gensim_result.json', 'w') as fp:
+with open('../word_vector_data/three_billboards_outside_ebbing_gensim_result.json', 'w') as fp:
     json.dump(word_vectors, fp,sort_keys=True, indent=4)
 
 

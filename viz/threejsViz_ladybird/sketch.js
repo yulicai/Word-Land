@@ -6,8 +6,8 @@
 
 
 
-const current_movie = "Three Billboards";
-const path_to_file = "three_billboards_outside_ebbing_3d_vector_result.json";
+const current_movie = "Lady Bird";
+const path_to_file = "lady_bird_3d_vector_result.json";
 
 var camera, scene, scenelight, renderer, controls;
 var cameraSpeed = 0;
@@ -120,9 +120,9 @@ function preload() {
 
 function init() {
 
-    var textColor = 0x56030F;
-    var textOutlineColor = 0x000000;
-    var bgColor = 0x354F40;
+    var textColor = 0xAB443A;
+    var textOutlineColor = 0xffffff;
+    var bgColor = 0xCDBBBC;
     var lightColor = 0xffffff;
 
 
@@ -130,14 +130,14 @@ function init() {
     words_array = Object.keys(data);
 
     // Get the data from two high light words
-    word1 = "motherfuckers";
-    word2 = "judge"
+    word1 = "sacramento";
+    word2 = "home"
     word1Pos.x = data[word1][0];
     word1Pos.y = data[word1][1];
     word1Pos.z = data[word1][2];
     word1Pos.x = Math.floor(mapping(word1Pos.x, -17., 18., -mapping_range, mapping_range));
     word1Pos.y = Math.floor(mapping(word1Pos.y, -17., 18.,  -mapping_range, mapping_range));
-    word1Pos.z = Math.floor(mapping(word1Pos.z, -17., 18., -mapping_range, mapping_range));
+    word1Pos.z = Math.floor(mapping(word1Pos.z, -17., 18., -mapping_range/3., mapping_range));
 
 
     word2Pos.x = data[word2][0];
@@ -145,7 +145,7 @@ function init() {
     word2Pos.z = data[word2][2];
     word2Pos.x = Math.floor(mapping(word2Pos.x, -17., 18.,-mapping_range/2., mapping_range));
     word2Pos.y = Math.floor(mapping(word2Pos.y, -17., 18., -mapping_range/2., mapping_range));
-    word2Pos.z = Math.floor(mapping(word2Pos.z, -17., 18., -mapping_range, mapping_range));
+    word2Pos.z = Math.floor(mapping(word2Pos.z, -17., 18., -mapping_range/3., mapping_range));
     // Calculate the distance between this two words
     var _diff = (diff(word1Pos.x, word1Pos.y, word1Pos.z, word2Pos.x, word2Pos.y, word2Pos.z)).toFixed(2);
     document.getElementById("text_info").innerHTML = "In the movie " + current_movie + " <br /> <span style=\"color:#ff5935; font-size:17px\">" + word1 + " </span> and <span style=\"color:#ff5935; font-size:17px\"> " + word2 + " </span> <br /> are <span style=\"color:#ff5935\">" + _diff + " </span> pixels <br /> away from each other.";
@@ -211,7 +211,7 @@ function init() {
             // var z = getRandomArbitrary(0.,400)
             var mappedX = Math.floor(mapping(x, -17., 18., -mapping_range/2., mapping_range));
             var mappedY = Math.floor(mapping(y, -17., 18., -mapping_range/2., mapping_range));
-            var mappedZ = Math.floor(mapping(z, -17., 18., -mapping_range, mapping_range));
+            var mappedZ = Math.floor(mapping(z, -17., 18., -mapping_range/3., mapping_range));
             // Main function to generate three.js mesh from a word
             if (message == word1 || message == word2) generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matDark, specialMat);
             else generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matDark, matLite);
@@ -380,7 +380,7 @@ function onKeyUp(event) {
             var diff_word1_y = word1Pos.y - currentY;
             // var diff_word1_z = word1Pos.z - currentZ;
 
-            document.getElementById("movie_info").style.visibility = "visible";
+            // document.getElementById("movie_info").style.visibility = "visible";
 
             if (Math.abs(diff_word1_y) < 5 && Math.abs(diff_word1_x) < 5) speed2word1 = { x: 0, y: 0 };
             else speed2word1 = { x: diff_word1_x / counter, y: diff_word1_y / counter };

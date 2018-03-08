@@ -4,7 +4,7 @@ var cameraSpeed = 0;
 var raycaster;
 var mouse = new THREE.Vector2();
 
-
+const mapping_range = 500.;
 
 var blocker = document.getElementById('blocker');
 var instructions = document.getElementById('instructions');
@@ -66,7 +66,7 @@ preload();
 
 function preload() {
     var xobj = new XMLHttpRequest();
-    xobj.open('GET', "the_post_3d_vector_result.json");
+    xobj.open('GET', "call_me_by_your_name_3d_vector_result.json");
     xobj.responseType = "json";
     xobj.send();
     xobj.onload = function() {
@@ -171,9 +171,9 @@ function init() {
             var y = (data[message][1]);
             var z = (data[message][2]);
             // var z = getRandomArbitrary(0.,400)
-            var mappedX = Math.floor(mapping(x, -17., 18., -500., 500.));
-            var mappedY = Math.floor(mapping(y, -17., 18., -500., 500.));
-            var mappedZ = Math.floor(mapping(z, -17., 18., -400., 500.));
+            var mappedX = Math.floor(mapping(x, -17., 18., -mapping_range, mapping_range));
+            var mappedY = Math.floor(mapping(y, -17., 18., -mapping_range, mapping_range));
+            var mappedZ = Math.floor(mapping(z, -17., 18., -mapping_range/2., mapping_range));
             generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matDark, matLite);
         }
     }); //end load function
