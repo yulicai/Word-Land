@@ -68,12 +68,12 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 - Dictionary dict()
 	
-	d = {'cat': 'cute', 'dog': 'furry'}
+	d = {'cat': 'cute', 'dog': 'furry'}  
 	key, value pair
 
 - Set()
 	
-	animals = {'cat', 'dog'}
+	animals = {'cat', 'dog'}  
 	If an element is in the set, print(‘cat’ in animals) >> true
 
 
