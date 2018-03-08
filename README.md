@@ -176,6 +176,22 @@ model.build_vocab(sentences)
 model.train(sentences, total_examples=model.corpus_count,epochs=model.iter)
 ```
 
+##### Some notes from the papers and tutorials online for the above parameters.
+- Dimensions(size), default value is 100  
+Bigger size values require more training data, but can lead to better (more accurate) models. Reasonable values are in the tens to hundreds.   
+
+- Context window (window)   
+The recommended context window size is 10 for skip-gram and 5 for CBOW  
+
+- min_count, default value is 5  
+Words that appear only once or twice in a billion-word corpus are probably uninteresting typos and garbage. In addition, there’s not enough data to make any meaningful training on those words, so it’s best to ignore them. A reasonable value for min_count is between 0-100, depending on the size of your dataset.  
+
+##### You can also store and load models in gensim
+```python
+model.save('/tmp/mymodel')
+new_model = gensim.models.Word2Vec.load('/tmp/mymodel')
+```
+
 
 ## 3. Three.js
 
