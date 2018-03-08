@@ -90,7 +90,6 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 - Using **t-SNE**("tee-s-nee") a popular method to do dimensionality reduction for high-dimensional data to reduce the dimensions of our word vectors into 2 or 3 dimensions for us to visualize it. In this case we are using [t-SNE from scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) to do this reduction
 
-<br />
 
 #### 2.2.1 Python environment setup
 We are using python2 in this case  
