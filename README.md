@@ -111,7 +111,9 @@ There are 2 main learning algorithms in word2vec.
 | Predicting the context given the word     | Predict the word given its context | 
 | Works well with small amount of traing data     | Several time faster than skip gram      |   
 | Represents well even for rare words or phrases | Slightly better accuracy for frequent word    | 
+| The skip-gram architecture weighs nearby context words more heavily than more distant context words. More distant words are given less weight by randomly sampling them | The order of context words does not influence prediction|
 | Recommanded window size: 10 | Recommanded window size: 5| 
+
 <br />
 
 ***
