@@ -1,3 +1,6 @@
+
+const path_to_file = "call_me_by_your_name_3d_vector_result.json";
+
 var camera, scene, scenelight, renderer, controls;
 var cameraSpeed = 0;
 
@@ -66,7 +69,7 @@ preload();
 
 function preload() {
     var xobj = new XMLHttpRequest();
-    xobj.open('GET', "call_me_by_your_name_3d_vector_result.json");
+    xobj.open('GET', path_to_file);
     xobj.responseType = "json";
     xobj.send();
     xobj.onload = function() {

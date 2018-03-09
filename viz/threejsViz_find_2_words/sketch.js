@@ -146,6 +146,7 @@ function init() {
     word2Pos.x = Math.floor(mapping(word2Pos.x, -17., 18.,-mapping_range/2., mapping_range));
     word2Pos.y = Math.floor(mapping(word2Pos.y, -17., 18., -mapping_range/2., mapping_range));
     word2Pos.z = Math.floor(mapping(word2Pos.z, -17., 18., -mapping_range, mapping_range));
+
     // Calculate the distance between this two words
     var _diff = (diff(word1Pos.x, word1Pos.y, word1Pos.z, word2Pos.x, word2Pos.y, word2Pos.z)).toFixed(2);
     document.getElementById("text_info").innerHTML = "In the movie " + current_movie + " <br /> <span style=\"color:#ff5935; font-size:17px\">" + word1 + " </span> and <span style=\"color:#ff5935; font-size:17px\"> " + word2 + " </span> <br /> are <span style=\"color:#ff5935\">" + _diff + " </span> pixels <br /> away from each other.";
@@ -160,7 +161,6 @@ function init() {
     // Set up a new scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color(bgColor);
-    // scene.background = new THREE.Color(0xf0f0f0);
     scene.fog = new THREE.Fog(bgColor, 0, 850);
 
     // Control system
@@ -168,7 +168,6 @@ function init() {
     scene.add(controls.getObject());
 
     // Lighting
-    // scenelight = new THREE.AmbientLight(0x404040);
     scenelight = new THREE.AmbientLight(lightColor);
     scene.add(scenelight);
 
@@ -202,6 +201,7 @@ function init() {
             transparent: true,
             opacity: 0.8
         });
+        
         // Go through the data array and create a three.js mesh from each word
         for (var i = 0; i < words_array.length; i++) {
             var message = words_array[i];
