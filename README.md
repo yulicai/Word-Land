@@ -90,8 +90,25 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 
 ### 2.1 What is word2vec
 
-**CBOW and Skip Gram**
+"You shall know a word by the company it keeps."  --J.R.Firth 1957  
 
+[word2vec example on ML5](https://ml5js.github.io/docs/word2vec-example.html)
+
+“Some of the most interesting data doesn’t have a clear numeric representation” --Kyle McDonald
+
+The idea of word2vec is to *predict between every word and its context words*. Some other similar concept terms for it are *Distributional semantics* and *Word Embeddings*.  
+
+There are 2 main learning algorithms in word2vec.  
+**CBOW(Continuous bag of words) and Skip Gram**
+
+![2algorithms](https://github.com/yulicai/Word-Land/raw/master/images/2algorithms.png)
+
+| Skip-Gram        | CBOW           
+| ------------- |:-------------:| 
+| Predicting the context given the word     | Predict the word given its context | 
+| Works well with small amount of traing data     | Several time faster than skip gram      |   
+| Represents well even for rare words or phrases | Slightly better accuracy for frequent word    | 
+| Recommanded window size: 10| are neat      | Recommanded window size: 5| 
 <br />
 
 ***

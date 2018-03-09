@@ -10,6 +10,8 @@
 
 [NLTK Corpora](http://www.nltk.org/nltk_data/) Build-in support of NLTK for dozens of corpora and trained models.
 
+[First billion characters from wikipedia](http://mattmahoney.net/dc/enwik9.zip)
+
 ## Tutorials
 
 [The original research page on Google](https://code.google.com/archive/p/word2vec/)
