@@ -99,6 +99,9 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 The idea of word2vec is to *predict between every word and its context words*. Some other similar concept terms for it are *Distributional semantics* and *Word Embeddings*.  
 
 There are 2 main learning algorithms in word2vec.  
+
+<br />
+
 **CBOW(Continuous bag of words) and Skip Gram**
 
 ![2algorithms](https://github.com/yulicai/Word-Land/raw/master/images/2algorithms.png)
@@ -108,7 +111,7 @@ There are 2 main learning algorithms in word2vec.
 | Predicting the context given the word     | Predict the word given its context | 
 | Works well with small amount of traing data     | Several time faster than skip gram      |   
 | Represents well even for rare words or phrases | Slightly better accuracy for frequent word    | 
-| Recommanded window size: 10| are neat      | Recommanded window size: 5| 
+| Recommanded window size: 10 | Recommanded window size: 5| 
 <br />
 
 ***
@@ -275,9 +278,16 @@ The learning rate for t-SNE is usually in the range [10.0, 1000.0]. If the learn
 
 ### 3.1 What is three.js
 
+[How 3d works](http://content.mindofmatthew.com/how_3d_works/) A great explaination by Matthew Kaney.
+
 ### 3.2 A basic basic example 
 
+![basic3js](https://github.com/yulicai/Word-Land/raw/master/images/basic3js.png)
+
 ### 3.3 How to use Three.js to visualize our word2vec json result
+
+[TypeFace.js converter](https://gero3.github.io/facetype.js/). You need to convert a normal font file into JSON file before loading it into THREE.js  
+
 
 
 
