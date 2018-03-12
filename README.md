@@ -3,6 +3,7 @@
 ### How can human language be shaped into a virtual sculpture, a word land, through the help of machine language.
 
 Word Land is a project created by [Yuli Cai](https://www.caiyuli.com/), from her formal work [Word Land Route](https://github.com/yulicai/NOC_Intelligence-Learning/tree/master/word_land_route). This time the approach of the land takes place from 2 dimensions to 3 demensions. It takes a corpus of text, which are movies scripts in the following examples, process them through machine learning(word2vec), and visualize them as a 3D sculpture living in the screen using three.js.  
+Play some live examples from movies of Oscar 2018 [here](http://www.caiyuli.com/work/word-land/)  
 
 #### Resources
 

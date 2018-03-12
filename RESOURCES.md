@@ -12,6 +12,9 @@
 
 [First billion characters from wikipedia](http://mattmahoney.net/dc/enwik9.zip)
 
+[Corpora page on github](https://github.com/dariusk/corpora)
+
+
 ## Tutorials
 
 [The original research page on Google](https://code.google.com/archive/p/word2vec/)
@@ -36,3 +39,12 @@
 ## Related Projects
 
 [EmbeddingScripts](https://github.com/kylemcdonald/EmbeddingScripts) by Kyle McDonald
+
+[EXPERIMENTAL CREATIVE WRITING WITH THE VECTORIZED WORD by Allison Parrish](https://www.thestrangeloop.com/2017/experimental-creative-writing-with-the-vectorized-word.html) 
+
+
+## Three.js
+
+[A beginner's guide to 3js](http://blog.teamtreehouse.com/the-beginners-guide-to-three-js)
+
+[How 3D works by Mathew Kaney](http://content.mindofmatthew.com/how_3d_works/)

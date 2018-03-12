@@ -135,8 +135,8 @@ function init() {
     word1Pos.x = data[word1][0];
     word1Pos.y = data[word1][1];
     word1Pos.z = data[word1][2];
-    word1Pos.x = Math.floor(mapping(word1Pos.x, -17., 18., -mapping_range, mapping_range));
-    word1Pos.y = Math.floor(mapping(word1Pos.y, -17., 18.,  -mapping_range, mapping_range));
+    word1Pos.x = Math.floor(mapping(word1Pos.x, -17., 18., -mapping_range/2, mapping_range));
+    word1Pos.y = Math.floor(mapping(word1Pos.y, -17., 18.,  -mapping_range/2, mapping_range));
     word1Pos.z = Math.floor(mapping(word1Pos.z, -17., 18., -mapping_range/2., mapping_range));
 
 

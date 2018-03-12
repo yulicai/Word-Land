@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 400" enable-background="new 0 0 800 400" xml:space="preserve">
+<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="656.2,309.3 563.3,263.2 563.3,41.6 656.2,87.7 "/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="185.4" y1="119.7" x2="563.3" y2="41.6"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="278.3" y1="165.8" x2="656.2" y2="87.7"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="278.3" y1="387.4" x2="656.2" y2="309.3"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="185.4" y1="341.3" x2="563.3" y2="263.2"/>
+<polygon fill="#D1D3D4" stroke="#000000" stroke-miterlimit="10" points="278.3,387.4 185.4,341.3 185.4,119.7 278.3,165.8 "/>
+<circle fill="#AD7CB7" cx="522.1" cy="173.8" r="25.9"/>
+<circle fill="#F2663D" cx="430.3" cy="322.5" r="25.9"/>
+<path fill="#AD7CB7" d="M218.9,241.7c0,14.3-6.1,24.2-13.7,22.2s-13.7-15.2-13.7-29.5s6.1-24.2,13.7-22.2
+	C212.7,214.2,218.9,227.4,218.9,241.7z"/>
+<path fill="#F2663D" d="M272.2,346c0,14.3-6.1,24.2-13.7,22.2s-13.7-15.2-13.7-29.5s6.1-24.2,13.7-22.2
+	C266.1,318.5,272.2,331.7,272.2,346z"/>
+<text transform="matrix(1 0 0 1 218.8739 132.9059)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">top</text>
+<text transform="matrix(1 0 0 1 158.4936 381.9996)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">bottom</text>
+<text transform="matrix(1 0 0 1 141.6342 248.3053)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">left</text>
+<text transform="matrix(1 0 0 1 284.4769 282.7848)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">right</text>
+<text transform="matrix(1 0 0 1 132.4867 103.8737)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">near</text>
+<text transform="matrix(1 0 0 1 522.0998 34.2462)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">far</text>
+<g>
+	<line fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" x1="55.1" y1="253.5" x2="13.9" y2="274.9"/>
+	<line fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" x1="13.9" y1="274.9" x2="60.5" y2="283.6"/>
+	<path fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" d="M45.6,258.4c6.2,12,6.4,15,4.2,23.2"/>
+	
+		<ellipse transform="matrix(-0.9878 0.156 -0.156 -0.9878 135.9154 529.4855)" fill="#020202" cx="47.2" cy="270.1" rx="3.1" ry="8.7"/>
+</g>
+</svg>

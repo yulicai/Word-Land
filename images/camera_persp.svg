@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 400" enable-background="new 0 0 800 400" xml:space="preserve">
+<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="710.3,329.6 611.3,270.4 611.3,61.9 710.3,94.3 "/>
+<circle fill="#AD7CB7" cx="593" cy="198.8" r="25.9"/>
+<text transform="matrix(1 0 0 1 309.1602 272.4698)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">field of view</text>
+<text transform="matrix(1 0 0 1 201.4867 185.1375)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">near</text>
+<text transform="matrix(1 0 0 1 580.4866 50.5099)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">far</text>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="249.4" y1="201.9" x2="611.3" y2="61.9"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="300.3" y1="227.2" x2="710.3" y2="94.3"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="300.3" y1="357.7" x2="710.3" y2="329.6"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="249.4" y1="323.3" x2="611.3" y2="270.4"/>
+<polygon fill="#D1D3D4" stroke="#000000" stroke-miterlimit="10" points="300.3,357.7 249.4,323.3 249.4,201.9 300.3,227.2 "/>
+<circle fill="#F2663D" cx="456.2" cy="305.6" r="25.9"/>
+<path fill="#AD7CB7" d="M268.4,271.3c0,6.9-2,11.8-4.6,10.8s-4.6-7.4-4.6-14.3s2-11.8,4.6-10.8C266.4,257.9,268.4,264.3,268.4,271.3
+	z"/>
+<path fill="#F2663D" d="M290,317.3c0,12.5-4.6,21.1-10.3,19.4c-5.7-1.8-10.3-13.3-10.3-25.8s4.6-21.1,10.3-19.4S290,304.8,290,317.3
+	z"/>
+<g>
+	<g>
+		<path fill="none" stroke="#010101" stroke-width="3" stroke-miterlimit="10" d="M361.7,239.6c0-10.8-4.4-24.8-8.9-35.5"/>
+		<g>
+			<polygon fill="#010101" points="349.2,196.4 358.7,205.2 353,204.7 349.8,209.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="none" stroke="#010101" stroke-width="3" stroke-miterlimit="10" d="M363.8,282.7c0,10.8-4.4,24.8-8.9,35.5"/>
+		<g>
+			<polygon fill="#010101" points="351.3,325.9 351.9,313 355.2,317.6 360.8,317.1 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 121.8963 352.2845)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">aspect ratio</text>
+<text transform="matrix(1 0 0 1 99.1963 383.0846)" fill="#010101" font-family="'Futura-Medium'" font-size="25.7023">(width / height)</text>
+<g>
+	<line fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" x1="60.5" y1="296.9" x2="19.4" y2="318.3"/>
+	<line fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" x1="19.4" y1="318.3" x2="65.9" y2="327"/>
+	<path fill="none" stroke="#020202" stroke-width="2" stroke-miterlimit="10" d="M51.1,301.8c6.2,12,6.4,15,4.2,23.2"/>
+	
+		<ellipse transform="matrix(-0.9878 0.156 -0.156 -0.9878 153.541 614.8123)" fill="#020202" cx="52.6" cy="313.4" rx="3.1" ry="8.7"/>
+</g>
+</svg>

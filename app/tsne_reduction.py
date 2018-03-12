@@ -27,7 +27,7 @@ sizedown_vector = list()
 X = np.asarray(vector_list).astype('float64')
 # Convert it to a 3 dimensional vector space
 # Parameters matters
-tsne_model = TSNE(n_components=3, early_exaggeration=14.0, learning_rate=300.0, random_state=0)
+tsne_model = TSNE(n_components=3, early_exaggeration=8.0, learning_rate=300.0, random_state=0)
 np.set_printoptions(suppress=True)
 #.fit_transform: fit X into an embeded space and return that transformed output
 #.tolist(): use tolist() to convert numpy array into python list data structure 
@@ -38,5 +38,5 @@ result_vectors = dict()
 for i in range(len(word_list)):
     result_vectors[word_list[i]] = sizedown_vector[i]
 
-with open('../word_vector_data/three_billboards_outside_ebbing_3d_vector_result.json', 'w') as fp:
+with open('../word_vector_data/three_billboards_outside_ebbing_3d_vector_result2.json', 'w') as fp:
     json.dump(result_vectors, fp,sort_keys=True, indent=4)

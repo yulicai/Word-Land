@@ -6,7 +6,7 @@
 
 
 
-const current_movie = "Get Out";
+const current_movie = "The Shape of Water";
 const path_to_file = "the_shape_of_water_3d_vector_result.json";
 
 var camera, scene, scenelight, renderer, controls;
