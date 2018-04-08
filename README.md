@@ -85,6 +85,25 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 	animals = {'cat', 'dog'}  
 	If an element is in the set, print(‘cat’ in animals) >> true
 
+Run python local server
+
+- Mac user
+
+	# If Python version returned above is 3.X
+	python -m http.server
+	# If Python version returned above is 2.X
+	python -m SimpleHTTPServer
+
+- Windows user
+
+	Go to python.org
+	Under the Download section, click the link for Python "3.xxx".
+	At the bottom of the page, choose the Windows x86 executable installer and download it.
+	When it has downloaded, run it.
+	On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
+	Click Install, then click Close when the installation has finished.
+
+
 <br />
 
 ## 2. word2vec
