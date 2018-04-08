@@ -1,5 +1,5 @@
 
-const path_to_file = "call_me_by_your_name_3d_vector_result.json";
+const path_to_file = "data/darkest_hour_3d_vector_result.json";
 
 var camera, scene, scenelight, renderer, controls;
 var cameraSpeed = 0;

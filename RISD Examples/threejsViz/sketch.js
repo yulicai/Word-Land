@@ -6,8 +6,13 @@
 
 
 
-const current_movie = "Call Me by Your Name";
-const path_to_file = "call_me_by_your_name_3d_vector_result.json";
+const current_movie = "Darkest Hour";
+const path_to_file = "data/darkest_hour_3d_vector_result.json";
+
+var is_searching_words = false;
+const first_word = "conservative";
+const second_word = "why";
+
 
 var camera, scene, scenelight, renderer, controls;
 var cameraSpeed = 0;
@@ -121,7 +126,6 @@ function preload() {
 function init() {
 
     var textColor = 0xeebd49;
-    var textOutlineColor = 0x6600ff;
     var bgColor = 0x0f5b9e;
     var lightColor = 0xffffff;
 
@@ -129,27 +133,32 @@ function init() {
     // Save all the words in an array
     words_array = Object.keys(data);
 
-    // Get the data from two high light words
-    word1 = "elio";
-    word2 = "oliver"
-    word1Pos.x = data[word1][0];
-    word1Pos.y = data[word1][1];
-    word1Pos.z = data[word1][2];
-    word1Pos.x = Math.floor(mapping(word1Pos.x, -17., 18., -mapping_range/2, mapping_range));
-    word1Pos.y = Math.floor(mapping(word1Pos.y, -17., 18.,  -mapping_range/2, mapping_range));
-    word1Pos.z = Math.floor(mapping(word1Pos.z, -17., 18., -mapping_range/2., mapping_range));
+    if (is_searching_words) {
+        // Get the data from two high light words
+        word1 = first_word;
+        word2 = second_word;
+        word1Pos.x = data[word1][0];
+        word1Pos.y = data[word1][1];
+        word1Pos.z = data[word1][2];
+        word1Pos.x = Math.floor(mapping(word1Pos.x, -17., 18., -mapping_range / 2, mapping_range));
+        word1Pos.y = Math.floor(mapping(word1Pos.y, -17., 18., -mapping_range / 2, mapping_range));
+        word1Pos.z = Math.floor(mapping(word1Pos.z, -17., 18., -mapping_range / 2., mapping_range));
 
 
-    word2Pos.x = data[word2][0];
-    word2Pos.y = data[word2][1];
-    word2Pos.z = data[word2][2];
-    word2Pos.x = Math.floor(mapping(word2Pos.x, -17., 18.,-mapping_range/2., mapping_range));
-    word2Pos.y = Math.floor(mapping(word2Pos.y, -17., 18., -mapping_range/2., mapping_range));
-    word2Pos.z = Math.floor(mapping(word2Pos.z, -17., 18., -mapping_range/2., mapping_range));
-    // Calculate the distance between this two words
-    var _diff = (diff(word1Pos.x, word1Pos.y, word1Pos.z, word2Pos.x, word2Pos.y, word2Pos.z)).toFixed(2);
-    document.getElementById("text_info").innerHTML = "In the movie " + current_movie + " <br /> <span style=\"color:#ff5935; font-size:17px\">" + word1 + " </span> and <span style=\"color:#ff5935; font-size:17px\"> " + word2 + " </span> <br /> are <span style=\"color:#ff5935\">" + _diff + " </span> pixels <br /> away from each other.";
+        word2Pos.x = data[word2][0];
+        word2Pos.y = data[word2][1];
+        word2Pos.z = data[word2][2];
+        word2Pos.x = Math.floor(mapping(word2Pos.x, -17., 18., -mapping_range / 2., mapping_range));
+        word2Pos.y = Math.floor(mapping(word2Pos.y, -17., 18., -mapping_range / 2., mapping_range));
+        word2Pos.z = Math.floor(mapping(word2Pos.z, -17., 18., -mapping_range / 2., mapping_range));
+        // Calculate the distance between this two words
+        var _diff = (diff(word1Pos.x, word1Pos.y, word1Pos.z, word2Pos.x, word2Pos.y, word2Pos.z)).toFixed(2);
+        document.getElementById("text_info").innerHTML = "In the movie " + current_movie + " <br /> <span style=\"color:#ff5935; font-size:17px\">" + word1 + " </span> and <span style=\"color:#ff5935; font-size:17px\"> " + word2 + " </span> <br /> are <span style=\"color:#ff5935\">" + _diff + " </span> pixels <br /> away from each other.";
+    } else {
+        console.log("test");
+        document.getElementById("text_info").innerHTML = "Current Movie:  " + current_movie;
 
+    }
 
     // Initials for THREE.JS
 
@@ -160,7 +169,6 @@ function init() {
     // Set up a new scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color(bgColor);
-    // scene.background = new THREE.Color(0xf0f0f0);
     scene.fog = new THREE.Fog(bgColor, 0, 850);
 
     // Control system
@@ -175,14 +183,8 @@ function init() {
     // Load word with font
     var loader = new THREE.FontLoader();
     loader.load('fonts/helvetiker_regular.typeface.json', function(font) {
-        // var color = 0x006699; // Main text color 
-        // Material 1
-        var matDark = new THREE.LineBasicMaterial({
-            color: textOutlineColor,
-            linewidth: 4,
-            side: THREE.DoubleSide
-        });
-        // Material 2
+
+        // Material for normal text
         var matLite = new THREE.MeshPhongMaterial({
             color: textColor,
             shininess: 35,
@@ -190,7 +192,7 @@ function init() {
             opacity: 0.8,
             side: THREE.DoubleSide
         });
-        // Material 3
+        // Material for high-light text
         var specialMat = new THREE.MeshPhongMaterial({
             color: 0xf45342,
             side: THREE.DoubleSide,
@@ -204,12 +206,12 @@ function init() {
             var x = (data[message][0]);
             var y = (data[message][1]);
             var z = (data[message][2]);
-            var mappedX = Math.floor(mapping(x, -17., 18., -mapping_range/2., mapping_range));
-            var mappedY = Math.floor(mapping(y, -17., 18., -mapping_range/2., mapping_range));
-            var mappedZ = Math.floor(mapping(z, -17., 18., -mapping_range/2., mapping_range));
+            var mappedX = Math.floor(mapping(x, -17., 18., -mapping_range / 2., mapping_range));
+            var mappedY = Math.floor(mapping(y, -17., 18., -mapping_range / 2., mapping_range));
+            var mappedZ = Math.floor(mapping(z, -17., 18., -mapping_range / 2., mapping_range));
             // Main function to generate three.js mesh from a word
-            if (message == word1 || message == word2) generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matDark, specialMat);
-            else generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matDark, matLite);
+            if (message == word1 || message == word2) generateShapeFromText(message, mappedX, mappedY, mappedZ, font, specialMat);
+            else generateShapeFromText(message, mappedX, mappedY, mappedZ, font, matLite);
         }
     }); //end load function
 
@@ -228,7 +230,7 @@ function init() {
 //- Generate Mesh from word --//
 ////////////////////////////////
 
-function generateShapeFromText(_word, _xpos, _ypos, _zpos, _font, mD, mL) {
+function generateShapeFromText(_word, _xpos, _ypos, _zpos, _font, mL) {
     var xMid, text;
     var textShape = new THREE.BufferGeometry();
 
@@ -247,17 +249,6 @@ function generateShapeFromText(_word, _xpos, _ypos, _zpos, _font, mD, mL) {
     text.position.z = _zpos;
     scene.add(text);
 
-    var lineText = new THREE.Object3D();
-    for (var i = 0; i < shapes.length; i++) {
-        var shape = shapes[i];
-        var points = shape.getPoints();
-        var geometry = new THREE.BufferGeometry().setFromPoints(points);
-        geometry.translate(_xpos, _ypos, 0);
-        var lineMesh = new THREE.Line(geometry, mD);
-        lineMesh.position.z = _zpos;
-        lineText.add(lineMesh);
-    }
-    scene.add(lineText);
 }
 
 
@@ -363,46 +354,43 @@ function onKeyUp(event) {
         case 38: // up
             moveUp = false;
             break;
+        case 40: // down
+            moveDown = false;
+            break;
         case 87: // w
             moveForward = false;
-            break;
-        case 37: // left
-            onAmerica = true;
-            var currentX = controls.getObject().position.x;
-            var currentY = controls.getObject().position.y;
-            // var currentZ = controls.getObject().position.z;
-            var diff_word1_x = word1Pos.x - currentX;
-            var diff_word1_y = word1Pos.y - currentY;
-            // var diff_word1_z = word1Pos.z - currentZ;
-
-            document.getElementById("movie_info").style.visibility = "visible";
-
-            if (Math.abs(diff_word1_y) < 5 && Math.abs(diff_word1_x) < 5) speed2word1 = { x: 0, y: 0 };
-            else speed2word1 = { x: diff_word1_x / counter, y: diff_word1_y / counter };
             break;
         case 65: // a
             moveLeft = false;
             break;
-        case 40: // down
-            moveDown = false;
-            break;
+
         case 83: // s
             moveBackward = false;
             break;
+
+        case 68: // d
+            moveRight = false;
+            break;
+        case 37: // left
+            // Press left key move to the first word
+            onAmerica = true;
+            var currentX = controls.getObject().position.x;
+            var currentY = controls.getObject().position.y;
+            var diff_word1_x = word1Pos.x - currentX;
+            var diff_word1_y = word1Pos.y - currentY;
+
+            if (Math.abs(diff_word1_y) < 5 && Math.abs(diff_word1_x) < 5) speed2word1 = { x: 0, y: 0 };
+            else speed2word1 = { x: diff_word1_x / counter, y: diff_word1_y / counter };
+            break;
         case 39: // right
+            // Press right key move to the second word
             onPeace = true;
             var currentX = controls.getObject().position.x;
             var currentY = controls.getObject().position.y;
-            // var currentZ = controls.getObject().position.z;
             var diff_word2_x = word2Pos.x - currentX;
             var diff_word2_y = word2Pos.y - currentY;
-            // var diff_word2_z = word2Pos.z - currentZ;
-            // document.getElementById("movie_info").style.visibility = "visible";
             if (Math.abs(diff_word2_y) < 5 && Math.abs(diff_word2_x) < 5) speed2word2 = { x: 0, y: 0 };
             else speed2word2 = { x: diff_word2_x / counter, y: diff_word2_y / counter };
-            break;
-        case 68: // d
-            moveRight = false;
             break;
     }
 }
@@ -423,5 +411,5 @@ function diff(x1, y1, z1, x2, y2, z2) {
 }
 
 
-    document.addEventListener('keydown', onKeyDown, false);
-    document.addEventListener('keyup', onKeyUp, false);
+document.addEventListener('keydown', onKeyDown, false);
+document.addEventListener('keyup', onKeyUp, false);

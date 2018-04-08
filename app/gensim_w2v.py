@@ -18,7 +18,7 @@ import nltk
 import gensim.models.word2vec as w2v
 import numpy as np
 
-movie = "darkest_hour"
+movie = "moonlight"
 
 source_text = u""
 source_path = "../scripts/" + movie + ".txt"

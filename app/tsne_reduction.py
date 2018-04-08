@@ -9,7 +9,7 @@ import json
 import numpy as np
 from sklearn.manifold import TSNE
 
-movie = "darkest_hour"
+movie = "moonlight"
 
 source_path = '../word_vector_pretrained_data/' + movie+"/" +movie+"_gensim_result.json"
 output_path = '../word_vector_pretrained_data/' + movie+"/" + movie+ "_3d_vector_result.json"
