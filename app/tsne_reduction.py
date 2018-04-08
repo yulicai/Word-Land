@@ -9,8 +9,13 @@ import json
 import numpy as np
 from sklearn.manifold import TSNE
 
+movie = "darkest_hour"
+
+source_path = '../word_vector_pretrained_data/' + movie+"/" +movie+"_gensim_result.json"
+output_path = '../word_vector_pretrained_data/' + movie+"/" + movie+ "_3d_vector_result.json"
+
 # Load raw json data
-raw_vectors =json.loads( open("../word_vector_data/three_billboards_outside_ebbing_gensim_result.json").read())
+raw_vectors =json.loads( open(source_path).read())
 
 # Create two list to store words and their vectors separately
 vector_list = list()
@@ -38,5 +43,5 @@ result_vectors = dict()
 for i in range(len(word_list)):
     result_vectors[word_list[i]] = sizedown_vector[i]
 
-with open('../word_vector_data/three_billboards_outside_ebbing_3d_vector_result2.json', 'w') as fp:
+with open(output_path, 'w') as fp:
     json.dump(result_vectors, fp,sort_keys=True, indent=4)

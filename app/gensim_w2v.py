@@ -11,16 +11,20 @@ import sys
 import re
 # import multiprocessing
 import json
-
+import os
 import nltk
 # uncomment the following line if this is the first time running this script
 # nltk.download('punkt')
 import gensim.models.word2vec as w2v
 import numpy as np
 
+movie = "darkest_hour"
 
 source_text = u""
-with codecs.open("../scripts/three_billboards_outside_ebbing_script.txt","r","utf-8") as raw:
+source_path = "../scripts/" + movie + ".txt"
+output_path = '../word_vector_pretrained_data/' + movie+"/"
+
+with codecs.open(source_path,"r","utf-8") as raw:
     source_text += raw.read()
 
 # using nltk(natural language toolkit)
@@ -80,8 +84,9 @@ for sentence in sentences:
         except KeyError:
             break
 
-
-with open('../word_vector_data/three_billboards_outside_ebbing_gensim_result.json', 'w') as fp:
+if not os.path.isdir(output_path):
+    os.makedirs(output_path)
+with open(output_path+movie+"_gensim_result.json", 'w') as fp:
     json.dump(word_vectors, fp,sort_keys=True, indent=4)
 
 
