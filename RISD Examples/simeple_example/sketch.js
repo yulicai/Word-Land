@@ -19,6 +19,7 @@ function init() {
     // Scene
 
     scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0061ff);
 
 
     // Lighting
