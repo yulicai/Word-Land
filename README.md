@@ -88,20 +88,22 @@ Beautiful [intro to python documentation](https://github.com/antiboredom/detourn
 Run python local server
 
 - Mac user
-
+	
+	```
 	# If Python version returned above is 3.X
 	python -m http.server
 	# If Python version returned above is 2.X
 	python -m SimpleHTTPServer
+	```
 
 - Windows user
 
-	Go to python.org
-	Under the Download section, click the link for Python "3.xxx".
-	At the bottom of the page, choose the Windows x86 executable installer and download it.
-	When it has downloaded, run it.
-	On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
-	Click Install, then click Close when the installation has finished.
+	1. Go to python.org
+	2. Under the Download section, click the link for Python "3.xxx".
+	3. At the bottom of the page, choose the Windows x86 executable installer and download it.
+	4. When it has downloaded, run it.
+	5. On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
+	6. Click Install, then click Close when the installation has finished.
 
 
 <br />
